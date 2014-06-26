@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Wipeout Example in Angular</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
+</head>
+<body ng-app="wipeout-angular">
+
+<div ng-controller="CollapsableCtrl">
+    <div class="panel panel-primary">
+        <h4>{{appName}} (In Angular)</h4>
+        <div class="panel-heading" ng-click="showContent = !showContent">
+            <h3 class="panel-title">{{text.header}}</h3>
+        </div>
+        <div class="panel-body">
+            <div id="collapsibleElement" ng-show="showContent">
+                <collapsible></collapsible>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
